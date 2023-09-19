@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://xrhontnp43pa"]
+
+[ext_resource type="Texture2D" uid="uid://bl5mg1e5ut6sy" path="res://Images/BackGroundPic.png" id="1_wdrvp"]
+[ext_resource type="Script" path="res://BattleWidgets/battle_scene.gd" id="1_wxp1m"]
+
+[node name="BattleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wxp1m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackGroundPic" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_wdrvp")
