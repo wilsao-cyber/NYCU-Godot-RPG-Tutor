@@ -42,3 +42,7 @@ func SystemStatus():
 			pass
 		
 	pass
+
+func ChooseChara():
+	
+	pass
