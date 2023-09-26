@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xud7wirylmxs"
-path="res://.godot/imported/3p.png-35682cf18847fde116c37ad54623d46e.ctex"
+uid="uid://be6uecgfull33"
+path="res://.godot/imported/rectbox.png-a9fa200145338eebe9f4e6cc0031c3d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/3p.png"
-dest_files=["res://.godot/imported/3p.png-35682cf18847fde116c37ad54623d46e.ctex"]
+source_file="res://Images/rectbox.png"
+dest_files=["res://.godot/imported/rectbox.png-a9fa200145338eebe9f4e6cc0031c3d8.ctex"]
 
 [params]
 

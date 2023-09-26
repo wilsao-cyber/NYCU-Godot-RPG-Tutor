@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://xrhontnp43pa"]
+[gd_scene load_steps=5 format=3 uid="uid://xrhontnp43pa"]
 
 [ext_resource type="Texture2D" uid="uid://bl5mg1e5ut6sy" path="res://Images/BackGroundPic.png" id="1_wdrvp"]
 [ext_resource type="Script" path="res://BattleWidgets/battle_scene.gd" id="1_wxp1m"]
+[ext_resource type="Texture2D" uid="uid://be6uecgfull33" path="res://Images/rectbox.png" id="3_vqyo7"]
+[ext_resource type="Texture2D" uid="uid://b3xb3xobjvb7c" path="res://Images/normal.png" id="4_x4no1"]
 
 [node name="BattleScene" type="Control"]
 layout_mode = 3
@@ -14,3 +16,154 @@ script = ExtResource("1_wxp1m")
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_wdrvp")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -919.0
+offset_top = -319.0
+offset_right = 529.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_vqyo7")
+region_rect = Rect2(10, 5, 479, 290)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -421.0
+offset_top = -321.0
+offset_right = -11.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_vqyo7")
+region_rect = Rect2(5, 5, 490, 290)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -406.0
+offset_top = -285.0
+offset_right = -26.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="BattleButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "戰鬥"
+
+[node name="ChooseButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "選擇角色"
+
+[node name="ItemButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "使用道具"
+
+[node name="RunButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "逃跑"
+
+[node name="CharaBox" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -409.0
+offset_top = -355.0
+offset_right = 398.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.494118, 0.956863, 0.611765, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CharaBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="CharaButton1" type="Button" parent="CanvasLayer/CharaBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "角色1"
+icon = ExtResource("4_x4no1")
+expand_icon = true
+
+[node name="CharaButton2" type="Button" parent="CanvasLayer/CharaBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "角色2"
+icon = ExtResource("4_x4no1")
+expand_icon = true
+
+[node name="CharaButton3" type="Button" parent="CanvasLayer/CharaBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "角色3"
+icon = ExtResource("4_x4no1")
+expand_icon = true
+
+[node name="CharaButton4" type="Button" parent="CanvasLayer/CharaBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "角色4"
+icon = ExtResource("4_x4no1")
+expand_icon = true
+
+[node name="CharaButton5" type="Button" parent="CanvasLayer/CharaBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "角色5"
+icon = ExtResource("4_x4no1")
+expand_icon = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/BattleButton" to="." method="_on_battle_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ChooseButton" to="." method="_on_choose_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/RunButton" to="." method="_on_run_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharaBox/VBoxContainer/CharaButton1" to="." method="_on_chara_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharaBox/VBoxContainer/CharaButton2" to="." method="_on_chara_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharaBox/VBoxContainer/CharaButton3" to="." method="_on_chara_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharaBox/VBoxContainer/CharaButton4" to="." method="_on_chara_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharaBox/VBoxContainer/CharaButton5" to="." method="_on_chara_button_5_pressed"]
