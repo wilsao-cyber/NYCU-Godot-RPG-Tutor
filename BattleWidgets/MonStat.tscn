@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2fsgtxynqapw"]
+
+[ext_resource type="Script" path="res://BattleWidgets/MonStat.gd" id="1_cmn1y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vc1q"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hogoe"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect"]
+offset_right = 509.0
+offset_bottom = 113.0
+script = ExtResource("1_cmn1y")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_top = 72.0
+offset_right = 456.0
+offset_bottom = 99.0
+theme_override_styles/background = SubResource("StyleBoxFlat_5vc1q")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hogoe")
+
+[node name="LVLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 73.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "LV0"
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 7.0
+offset_right = 352.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "怪物1"
