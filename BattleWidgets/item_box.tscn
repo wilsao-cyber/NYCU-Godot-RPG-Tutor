@@ -1,0 +1,325 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctd7uljqs0qgc"]
+
+[ext_resource type="Script" path="res://BattleWidgets/item_box.gd" id="1_q0x01"]
+[ext_resource type="Texture2D" uid="uid://b3xb3xobjvb7c" path="res://Images/normal.png" id="1_tf5gn"]
+[ext_resource type="Texture2D" uid="uid://c6sb327pqrgs8" path="res://icon.svg" id="2_sibww"]
+[ext_resource type="PackedScene" uid="uid://cajxpbqci2m51" path="res://BattleWidgets/_item_box.tscn" id="4_vkst3"]
+
+[node name="ItemBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q0x01")
+
+[node name="Back" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.65098)
+
+[node name="BackColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -902.5
+offset_top = -482.0
+offset_right = 902.5
+offset_bottom = 482.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.756863, 0.490196, 1)
+
+[node name="MonsChoose" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 88.0
+offset_top = -468.0
+offset_right = 365.0
+offset_bottom = 436.0
+grow_vertical = 2
+texture = ExtResource("1_tf5gn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MonsChoose"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MonsChoose/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "選擇怪物"
+horizontal_alignment = 1
+
+[node name="Mons1" type="Button" parent="MonsChoose/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.317647, 0.317647, 0.321569, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+disabled = true
+icon = ExtResource("2_sibww")
+icon_alignment = 1
+
+[node name="Mons2" type="Button" parent="MonsChoose/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.317647, 0.317647, 0.321569, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_sibww")
+icon_alignment = 1
+
+[node name="Mons3" type="Button" parent="MonsChoose/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.317647, 0.317647, 0.321569, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_sibww")
+icon_alignment = 1
+
+[node name="Mons4" type="Button" parent="MonsChoose/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.317647, 0.317647, 0.321569, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_sibww")
+icon_alignment = 1
+
+[node name="Mons5" type="Button" parent="MonsChoose/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.317647, 0.317647, 0.321569, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_sibww")
+icon_alignment = 1
+
+[node name="Mons6" type="Button" parent="MonsChoose/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.317647, 0.317647, 0.321569, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_sibww")
+icon_alignment = 1
+
+[node name="ItemBox" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 80.0
+offset_right = 1816.0
+offset_bottom = 976.0
+texture = ExtResource("1_tf5gn")
+
+[node name="BoxBack" type="ColorRect" parent="ItemBox"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -672.0
+offset_top = -768.0
+offset_right = 664.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0.321569, 0.309804, 1)
+
+[node name="Label" type="Label" parent="ItemBox"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 328.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 42
+text = "道具"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ItemBox"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -672.0
+offset_top = -768.0
+offset_right = 664.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemBox/ScrollContainer"]
+custom_minimum_size = Vector2(1330, 0)
+layout_mode = 2
+
+[node name="_itemBox" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox2" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox3" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox4" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox5" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox6" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox7" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox8" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox9" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox10" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox11" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox12" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox13" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox14" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox15" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox16" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox17" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox18" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox19" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox20" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox21" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox22" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox23" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox24" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox25" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox26" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="_itemBox27" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(1330, 120)
+layout_mode = 2
+
+[node name="_itemBox28" parent="ItemBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_vkst3")]
+visible = false
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_top = 96.0
+offset_right = -160.0
+offset_bottom = 176.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 42
+text = "返回"
+
+[connection signal="pressed" from="MonsChoose/VBoxContainer/Mons1" to="." method="_on_mons_1_pressed"]
+[connection signal="pressed" from="MonsChoose/VBoxContainer/Mons2" to="." method="_on_mons_2_pressed"]
+[connection signal="pressed" from="MonsChoose/VBoxContainer/Mons3" to="." method="_on_mons_3_pressed"]
+[connection signal="pressed" from="MonsChoose/VBoxContainer/Mons4" to="." method="_on_mons_4_pressed"]
+[connection signal="pressed" from="MonsChoose/VBoxContainer/Mons5" to="." method="_on_mons_5_pressed"]
+[connection signal="pressed" from="MonsChoose/VBoxContainer/Mons6" to="." method="_on_mons_6_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

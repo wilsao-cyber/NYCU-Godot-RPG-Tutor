@@ -83,8 +83,6 @@ func _on_choose_button_pressed():
 	pass # Replace with function body.
 
 
-func _on_item_button_pressed():
-	pass # Replace with function body.
 
 
 func _on_run_button_pressed():
@@ -99,6 +97,7 @@ func _on_chara_button_1_pressed():
 	$CanvasLayer/CharaBox.visible = false
 	if !party[1]["isAlive"]:
 		$CanvasLayer/CharaBox/VBoxContainer/CharaButton1.disabled = true
+	General.Party = party
 	pass # Replace with function body.
 
 
@@ -110,6 +109,7 @@ func _on_chara_button_2_pressed():
 	$CanvasLayer/CharaBox.visible = false
 	if !party[2]["isAlive"]:
 		$CanvasLayer/CharaBox/VBoxContainer/CharaButton2.disabled = true
+	General.Party = party
 	pass # Replace with function body.
 
 
@@ -165,4 +165,9 @@ func _on_skill_button_3_pressed():
 
 func _on_skill_button_4_pressed():
 	_phyAtk(curSkills[3]["id"])
+	pass # Replace with function body.
+
+
+func _on_item_button_pressed():
+	get_tree().change_scene_to_file("res://BattleWidgets/item_box.tscn")
 	pass # Replace with function body.
