@@ -141,33 +141,50 @@ func _Skills():
 	$CanvasLayer/SkillButton4.text = curSkills[3]["name"]
 	pass
 
-func _phyAtk(id):
-	CurEnemy["currentHP"] = CurEnemy["currentHP"] - curSkills[id]["pow"]
-	if CurEnemy["currentHP"] <1:
-		CurEnemy["currentHP"] = 0
-		CurEnemy["isAlive"] = false
-	_SetCharaStatus(EnStatsBar,CurEnemy)
+func _phyAtk(id,tar):
+	var targetCom = null
+	var tarBar = null
+	match tar:
+		0:
+			targetCom = CurEnemy
+			tarBar = EnStatsBar
+			pass
+		1:
+			targetCom = CurChara
+			tarBar = MyStatsBar
+			pass
+	targetCom["currentHP"] = targetCom["currentHP"] - curSkills[id]["pow"]
+	if targetCom["currentHP"] <1:
+		targetCom["currentHP"] = 0
+		targetCom["isAlive"] = false
+	_SetCharaStatus(tarBar,targetCom)
 	pass # Replace with function body.
 
+
 func _on_skill_button_1_pressed():
-	_phyAtk(curSkills[0]["id"])
+	_phyAtk(curSkills[0]["id"],0)
 
 
 func _on_skill_button_2_pressed():
-	_phyAtk(curSkills[1]["id"])
+	_phyAtk(curSkills[1]["id"],0)
 	pass # Replace with function body.
 
 
 func _on_skill_button_3_pressed():
-	_phyAtk(curSkills[2]["id"])
+	_phyAtk(curSkills[2]["id"],0)
 	pass # Replace with function body.
 
 
 func _on_skill_button_4_pressed():
-	_phyAtk(curSkills[3]["id"])
+	_phyAtk(curSkills[3]["id"],0)
 	pass # Replace with function body.
 
 
 func _on_item_button_pressed():
 	get_tree().change_scene_to_file("res://BattleWidgets/item_box.tscn")
 	pass # Replace with function body.
+
+func _on_enemy_phyAtk():
+	var enSkill = CurEnemy["skills"]
+	var nowSkill = randi_range(0,len(enSkill)-1)
+	_phyAtk(enSkill[nowSkill],1)
